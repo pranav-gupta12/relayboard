@@ -28,11 +28,12 @@ export function FilterBar({
         <input
           ref={searchInputRef}
           type="search"
+          aria-label="Search handoffs"
           placeholder="Search handoffs"
           value={filters.query}
           onChange={(event) => update("query", event.target.value)}
         />
-        <kbd aria-label="Keyboard shortcut: slash">/</kbd>
+        <kbd aria-hidden="true" title="Press slash to focus search">/</kbd>
       </label>
       <label>
         <span className="sr-only">Status</span>
